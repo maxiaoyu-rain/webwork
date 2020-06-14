@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我们的乐队</title>
+	<style>
+	*{
+		padding: 0;
+		margin: 0;
+		line-height: 1;
+	}
+	a{
+		text-decoration: none;
+	}
+	ul{
+		list-style-type: none;
+	}
+	.clear:after{
+		content: '';
+		display: block;
+		height: 0;
+		clear: both;
+	}
+	.w{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.top{
+		height: 30px;
+		margin: 20px auto;
+	}
+	.login{
+		float: right;
+		margin: 0 auto;
+	}
+	.header{
+		height: 70px;
+		background-color: pink;
+		margin: 20px auto;
+	}
+	.logo{
+		float: left;
+		width: 150px;
+		height: 70px;
+	}
+	.nav{
+		float: left;
+		margin-left: 80px;
+	}
+	.hearder p{
+		float: left;
+		font: bold 40px;
+		color: rgba(0,163,255,1);
+	}
+	.nav ul{
+		float: left;
+	}
+	.nav ul li{
+		float: left;
+	}
+	.nav ul li a{
+		display: block;
+		height: 70px;
+		padding: 0 20px;
+		line-height: 70px;
+		font-size: 18px;
+		color: #050505;
+	}
+	.form{
+		float: right;
+		margin-top: 25px;
+		margin-right: 10px;
+	}
+	.search{
+		float: left;
+		width: 145px;
+		padding: 4px;
+		border: 1px solid rgba(208,61,61,1);
+	}
+	.submit{
+		float: left;
+		width: 30px;
+		height: 26px;
+		border: 0;
+		background: rgba(208,61,61,1) url('pic/search.png') no-repeat center center;
+	}
+	.banner{
+		height: 420px;
+		background-color:rgba(0,0,0,1);
+	}
+	.banner .w{
+		height: 420px;
+		background: url('pic/back2.jpg') no-repeat top center;
+	}
+	.subnav{
+		width: 190px;
+		height: 420px;
+		background:rgba(0,0,0,0.3);
+	}
+	.subnav ul li{
+		height: 45px;
+		line-height: 45px;
+		padding: 0 20px;
+	}
+	.subnav ul li a{
+		height: 45px;
+		margin: 0 35px;
+		line-height: 45px;
+		font-size: 16px;
+		color: #fff;
+	}
+	.subnav a:hover{
+		color: #00a3ff;
+	}
+	.boss{
+		height: 60px;
+		background-color: #fff;
+		margin-top: 10px;
+		box-shadow: 0 2px 3px 3px rgba(0,0,0,0.1);
+
+	}
+	.boss h3{
+		height: 60px;
+		line-height: 60px;
+		float: left;
+		margin-left: 30px;
+		font-size: 20px;
+		color: #000;
+	}
+	.boss ul{
+		height: 60px;
+		line-height: 60px;
+		float: left;
+		margin-left: 50px;
+	}
+	.boss ul li {
+		height: 60px;
+		float:left ;
+	}
+	.boss ul li a{
+		line-height: 60px;
+		padding: 0 80px;
+		font-size: 20px;
+		color: #050505;
+		border-left: 2px solid #ccc;
+	}
+    .add {
+    	height: 60px;
+		line-height: 60px;
+    	float: right;
+    	margin-right: 30px;
+    	font-size: 20px;
+		color: #00a4ff;
+    }
+    .box{
+    	margin-top: 20px;
+    }
+    .bos{
+    	height: 45px;
+    }
+    .bos h3{
+    	float: left;
+    	font-size: 20px;
+    	color: #B22222;
+    }
+    .bos a{
+    	float: right;
+    	font-size: 15px;
+    	color: #F08080;
+    	margin-top: 10px;
+    	margin-right: 30px;
+    }
+    .bos-bd ul li {
+    	float: left;
+    	width: 350px;
+    	height: 450px;   	
+    	margin-right: 50px;
+    }
+    .bos-bd li img{
+    	width: 100%;
+    	height: 75%;
+    }
+    .bos-bd ul li h4{
+    	margin:25px 90px ;
+    	font-size: 20px;
+    	color: #050505;
+    	font-weight:400 ;
+    }
+    .content{
+    	margin-top: 20px;
+    }
+    .team{
+    	height: 45px;
+    }
+    .team h3{
+    	float: left;
+    	font-size: 20px;
+    	color: #B22222;
+    }
+    .team a{
+    	float: right;
+    	font-size: 15px;
+    	color: #F08080;
+    	margin-top: 10px;
+    	margin-right: 30px;
+    }
+    .team-bd ul li {
+    	float: left;
+    	width: 350px;
+    	height: 550px;
+    	margin-right: 50px;
+    }
+    .team-bd li img{
+    	width: 100%;
+    	height: 79%;
+    }
+    .team-bd ul li h4{
+    	font-size: 20px;
+    	color: #050505;
+    	font-weight:400 ;
+    }
+    .team-co{
+    	background-color: #CD5C5C;
+    	width: 350px;
+    	height: 100px;
+    	text-align: center;
+    }
+    .team-co h4{
+    	margin: 0 10px 20px 20px;
+    }
+    .footer{
+    	height: 420px;
+    	background-color: pink;
+    	margin-top: 20px;
+    }
+    .footer .w{
+    	padding-top: 30px;
+    }
+    .copyright{
+    	float: left;
+    }
+    .links{
+    	float: right;
+    }
+    .copyright img {
+    	width: 180px;
+		height: 100px;
+	}
+	.copyright p{
+		width: 250px;
+		font-size: 12px;
+		color: #000;
+		margin: 20px 0 15px 0;
+	}
+	.copyright .app{
+		display: block;
+		width: 120px;
+		height: 35px;
+		border: 1px solid #A52A2A;
+		text-align: center;
+		line-height: 35px;
+		color:  #A52A2A;
+		font-size: 17px;
+	}
+	.links dl dt{
+		font-size: 18px;
+		color:#8B0000 ;
+		margin-bottom: 5px;
+	}
+	.links dl dd{
+		margin-bottom: 5px;
+	}
+	.links dl dd a{
+		color: #8B0000;
+		font-size: 16px;
+	}
+	.links dl{
+		float: left;
+		margin-right: 100px;
+	}
+	</style>	
+</head>
+<body>
+	<div class="top w">
+			<form class="login">
+				用户名：<input type="text" id="name"> 密码：<input type="password" id="pwd">
+				<input type="submit" value="登录">
+			</form>
+	</div>
+	<div class="header w">
+		<img class="logo" src="pic/logo.png">
+		<div class="nav">
+			<ul class="nava">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">节目形式</a></li>
+				<li><a href="#">节目列表</a></li>
+				<li><a href="#">参演嘉宾</a></li>
+				<li><a href="#">节目原声</a></li>
+				<li><a href="#">播出信息</a></li>
+			</ul>
+
+			<form class="form">
+				<input type="text" placeholder="请输入搜索的内容" class="search" style="vertical-align: bottom;">
+				<input type="button" class="submit" style="vertical-align: bottom;
+				">
+			</form>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="w">
+			<div class="subnav ">
+				<ul>
+					<li><a href="#">节目背景</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">节目模式</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">创作团队</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">节目列表</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">参演嘉宾</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">播出时间</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">节目评价</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">节目争议</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">播出平台</a></li>
+				</ul>	
+			</div>	
+		</div>	
+	</div>
+	<div class="boss w">
+		<h3>合伙人</h3>
+		<ul>
+			<li><a href="#">谢霆锋</a></li>
+			<li><a href="#">王俊凯</a></li>
+			<li><a href="#">萧敬腾</a></li>
+		</ul>
+		<a href="#" class="add">特约嘉宾</a>	
+	</div>
+	<div class="box w clear">
+		<div class="bos">
+			<h3>boss</h3>
+			<a href="#">查看详情</a>
+		</div>
+		<div class="bos-bd">
+			<ul>
+				<li>
+					<img src="pic/boss1.jpg">
+					<h4>谢霆锋·运营总裁</h4>
+				</li>
+				<li>
+					<img src="pic/boss2.jpg" >
+					<h4>王俊凯·市场总裁</h4>
+				</li>
+				<li>
+					<img src="pic/boss3.jpg">
+					<h4>萧敬腾·技术总监</h4>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="content w clear">
+		<div class="team">
+			<h3>乐队</h3>
+		    <a href="#">查看更多</a>
+	    </div>
+		<div class="team-bd">
+			<ul>
+				<li>
+					<img src="pic/team1.jpg">
+					<div class="team-co">
+					    <h4>CORSAK组</h4>
+					    <h5>胡梦周 李长庚 戚唯 李明洁</h5>
+						
+				    </div>
+				</li>
+				<li>
+					<img src="pic/team2.jpg">
+					<div class="team-co">
+					    <h4>七赫兹</h4>
+						<h5>刘郡格 刘文君 孙辰逸 胡仕泽 </h5>
+				    </div>
+				</li>
+				<li>
+					<img src="pic/team3.jpg">
+					<div class="team-co">
+					    <h4>泰山乐队</h4>
+						<h5>张恩岱 倪琰宸 杨洋 王迪侯珺潇</h5>
+				    </div>
+				</li>
+				
+				<li>
+					<img src="pic/team4.jpg">
+					<div class="team-co">
+					    <h4>星火飞行器</h4>
+						<h5>王北车 郑安伟 郭锐 叶子 逯通</h5>
+				    </div>
+				</li>
+				<li>
+					<img src="pic/team5.jpg">
+					<div class="team-co">
+					    <h4>火融乐队</h4>
+						<h5>姜珊 王以太 阿达娃 徐彬坷 王启 李显荣</h5>
+				    </div>
+				</li>
+				<li>
+					<img src="pic/team6.jpg">
+					<div class="team-co">
+					    <h4>MILK乐队</h4>
+					    <h5>郑伟杰 王鲁飞 李佩莹 黄俊杰 赵家强</h5>
+				    </div>
+				</li>
+			</ul>	
+		</div>
+	</div>
+	<div class="footer">
+		<div class="w">
+			<div class="copyright">
+				<img src="pic/logo.png">
+				<p>节目中，三位合伙人带着自己的乐队初心，与来自世界各地、背负着音乐梦想的60余位优秀乐手，进行音乐上的碰撞。乐手们在三位合伙人的助力下，在比赛中不断重组、拆分、捆绑，最终寻找到志同道合的乐队伙伴，组建一支属于自己的乐队,观看《我们的乐队》，请到芒果APP</p>
+				<a href="#" class="app">下载芒果APP</a>
+			</div>
+			<div class="links">
+				<dl>
+					<dt>关于我们的乐队</dt>
+					<dd><a href="#">关于</a></dd>
+					<dd><a href="#">合伙人</a></dd>
+					<dd><a href="#">合作伙伴</a></dd>
+					<dd><a href="#">制作团队</a></dd>
+					<dd><a href="#">往期选手</a></dd>
+				</dl>
+				<dl>
+					<dt></dt>
+					<dd><a href="#">关于晋级</a></dd>
+					<dd><a href="#">晋级团队</a></dd>
+					<dd><a href="#">复活团队</a></dd>
+					<dd><a href="#">投票通道</a></dd>
+				</dl>
+				<dl>
+					<dt>合作伙伴</dt>
+					<dd><a href="#">芒果TV</a></dd>
+					<dd><a href="#">元气森林</a></dd>
+					<dd><a href="#"></a></dd>
+				</dl>
+			</div>	
+		</div>
+	</div>	
+</body>
+</html>
